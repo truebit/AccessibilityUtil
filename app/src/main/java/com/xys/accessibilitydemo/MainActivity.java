@@ -6,7 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.Settings;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 
 import com.xys.accessibilitydemo.utils.BaseAccessibilityService;
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         BaseAccessibilityService.getInstance().init(this);
         mPackageManager = this.getPackageManager();
-        mPackages = new String[]{"com.hujiang.studytool"};
+        mPackages = new String[]{"com.sankuai.meituan.takeoutnew","com.sankuai.meituan"};
     }
 
     public void goAccess(View view) {
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void goApp(View view) {
-        Intent intent = mPackageManager.getLaunchIntentForPackage("com.hujiang.hjclass");
+        Intent intent = mPackageManager.getLaunchIntentForPackage("com.sankuai.meituan.takeoutnew");
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
     }

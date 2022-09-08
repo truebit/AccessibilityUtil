@@ -59,6 +59,8 @@ public class AutoReplyAccessibilityService extends BaseAccessibilityService {
                 }
                 hasAction = false;
                 break;
+            default:
+                break;
         }
     }
 
